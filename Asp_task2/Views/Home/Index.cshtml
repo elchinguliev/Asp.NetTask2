@@ -1,0 +1,41 @@
+﻿
+
+<head>
+</head>
+
+
+<body>
+
+    
+    <div>
+                <div style="font-size:30px ; font-weight:bold ; width:auto">
+                    <div style="font-size:40px;font-weight:bold"></div>
+                         <a asp-action="Add" asp-controller="Home">
+                    <button style=" display:block; font-size:30px; margin-left:52%; type="button">Add</button>
+                </a>
+                    @foreach (var item in Model.Products)
+                    {
+                        <div style="background-color:crimson; width:50%; border :3px solid black">
+
+                    <h1>@item.ProductId. @item.ProductName  </h1>
+                    <h2> Description :  @item.ProductDescription  </h2>
+                    <h2> Discount :  @item.ProductDiscount %  </h2>
+                    <h2> Price :  @item.ProductPrice manat  </h2>
+
+                    <a asp-action="Delete" asp-controller="Home" asp-route-myid="@item.ProductId">
+                        <button style=" background:black; font-size:20px; color:white; font-weight:bold"   type="button">Delete</button>
+                    </a>
+                        </div>
+                        
+                    }
+                </div>
+           
+
+       
+      
+          
+    </>
+
+
+
+</body>

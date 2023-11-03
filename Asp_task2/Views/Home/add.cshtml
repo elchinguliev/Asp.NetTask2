@@ -1,0 +1,29 @@
+﻿@model AddProductViewModell
+
+
+
+<form asp-controller="Home" asp-action="Add" method="post">
+    <section>
+        <label asp-for="Product.ProductName"></label>
+        <input asp-for="Product.ProductName" />
+        <span style="color:red"></span>
+    </section>
+    <section>
+        <label asp-for="Product.ProductDescription"></label>
+        <input asp-for="Product.ProductDescription" />
+        <span style="color:red"></span>
+    </section>
+    <section>
+        <label asp-for="Product.ProductDiscount"></label>
+        <input asp-for="Product.ProductDiscount" />
+        <span style="color:red"></span>
+    </section>
+    <section>
+        <label asp-for="Product.ProductPrice"></label>
+        <input asp-for="Product.ProductPrice" />
+        <span style="color:red"></span>
+    </section>
+    <section>
+        <button type="submit">Add</button>
+    </section>
+</form>
